@@ -10,105 +10,122 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: { sans: ['Inter', 'sans-serif'] },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="min-h-screen font-sans antialiased">
+  <body class="min-h-screen antialiased bg-black">
     <!-- Homepage (node 16:1019) -->
     <div
-      class="flex min-h-screen w-full flex-col items-center"
+      class="relative flex min-h-screen w-full flex-col items-center"
       data-name="Homepage"
       data-node-id="16:1019"
     >
-      <!-- Header (node 16:1020) -->
+      <!-- Header (component 16:1016, instance 16:1020) -->
       <header
-        class="flex w-full shrink-0 items-center gap-2 bg-[#312e81] px-8 py-6 md:gap-2 md:px-8 md:py-6"
+        class="relative flex w-full shrink-0 items-center gap-2 px-8 py-6"
         data-name="Header"
         data-node-id="16:1020"
       >
+        <!-- Header background image -->
+        <img
+          src="https://www.figma.com/api/mcp/asset/2c439735-301f-4fa6-b6de-8d22da5368b9"
+          alt=""
+          class="pointer-events-none absolute inset-0 h-full w-full max-w-none object-cover"
+          aria-hidden="true"
+        />
+
         <div
-          class="h-6 w-6 shrink-0 overflow-hidden"
-          data-name="sports_soccer_24dp"
+          class="relative h-6 w-6 shrink-0 overflow-hidden"
+          data-name="sports_soccer_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 1"
           aria-hidden="true"
         >
-          <img
-            src="https://www.figma.com/api/mcp/asset/cd85d46b-6eab-4c6b-8075-1e112edceb4e"
-            alt=""
-            class="block h-full w-full object-contain"
-          />
+          <div class="absolute inset-[8.33%]" data-name="Vector">
+            <img
+              src="https://www.figma.com/api/mcp/asset/3435e842-0ae6-4e03-b4f0-1a7fe78244f8"
+              alt=""
+              class="absolute block h-full w-full max-w-none object-contain"
+            />
+          </div>
         </div>
+
         <p
-          class="shrink-0 font-medium leading-6 text-[#eef2ff] text-[14px]"
-          data-node-id="I16:1020;16:1018"
+          class="relative shrink-0 w-full max-w-md text-[14px] font-medium leading-6 text-[#eef2ff]"
+          data-node-id="16:1018"
         >
           alternativefootball.net
         </p>
       </header>
 
-      <!-- Hero (node 16:1013) -->
+      <!-- Hero (node 21:989) -->
       <section
-        class="flex w-full shrink-0 flex-col items-start gap-8 bg-[#e0e7ff] px-6 py-14 md:px-[104px] md:py-14"
+        class="relative flex w-full flex-1 flex-col items-center justify-center gap-14 px-6 py-16 md:px-24"
         data-name="Hero"
-        data-node-id="16:1013"
+        data-node-id="21:989"
       >
+        <!-- Hero background: dark overlay + pitch photo -->
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+          <div class="absolute inset-0 bg-black" />
+          <img
+            src="https://www.figma.com/api/mcp/asset/45bd6696-de90-4444-9bbe-e7903ed9b58b"
+            alt=""
+            class="absolute inset-0 h-full w-full max-w-none object-cover opacity-20"
+          />
+        </div>
+
         <h1
-          class="whitespace-pre-wrap font-extrabold leading-[48px] tracking-[-0.576px] text-[#312e81] text-[32px] md:text-[48px]"
-          data-node-id="16:1014"
+          class="relative whitespace-pre-wrap text-center text-[32px] font-extrabold leading-[48px] tracking-[-0.576px] text-[#f8fafc] md:text-[48px]"
+          data-node-id="21:990"
         >
-          Non league finder,
+          Non league game finder,
+          <br />
           real football real fans
         </h1>
 
+        <!-- Futuristic Search Bar (node 21:966) -->
         <div
-          class="flex flex-col items-start gap-1.5"
-          data-name="input"
-          data-node-id="16:1015"
+          class="relative z-10 flex w-full max-w-[400px] flex-col items-start"
+          data-name="Futuristic Search Bar"
+          data-node-id="21:966"
         >
-          <p
-            class="shrink-0 font-medium leading-5 text-[#0f172a] text-[14px]"
-            data-node-id="I16:1015;2:270"
-          >
-            Find a game near your postcode
-          </p>
+          <!-- Overlay+Border -->
           <div
-            class="flex w-full max-w-[384px] items-start gap-2"
-            data-name="input/with button"
-            data-node-id="I16:1015;6:262"
+            class="flex w-full items-center rounded-full border border-[var(--acidgreen,#47f906)] bg-[rgba(26,26,16,0.8)] pl-6 pr-2 py-2"
+            data-name="Overlay+Border"
+            data-node-id="21:955"
           >
-            <div
-              class="min-h-0 min-w-0 flex-1"
-              data-name="default"
-              data-node-id="I16:1015;6:263"
-            >
-              <div
-                class="flex w-full items-center rounded-md border border-[#cbd5e1] border-solid bg-white px-3 py-2 pr-14"
-                data-name="field"
-                data-node-id="I16:1015;6:264"
-              >
-                <input
-                  type="text"
-                  placeholder="Postcode"
-                  class="w-full font-normal leading-6 text-[#0f172a] placeholder:text-[#94a3b8] text-[16px] outline-none"
-                  aria-label="Postcode"
-                  data-node-id="I16:1015;6:265"
-                />
-              </div>
+            <!-- Left icon -->
+            <div class="relative mr-3 h-5 w-4" data-name="Container" data-node-id="21:957">
+              <img
+                src="https://www.figma.com/api/mcp/asset/c395da7b-b559-4a54-96fc-9e2c702c9065"
+                alt=""
+                class="absolute inset-0 h-full w-full max-w-none object-contain"
+              />
             </div>
+
+            <!-- Input area -->
+            <div class="flex-1">
+              <input
+                type="text"
+                placeholder="Enter postcode"
+                aria-label="Postcode"
+                class="w-full rounded-full border-none bg-transparent px-3 py-3 text-[16px] font-medium text-white placeholder:text-[rgba(255,255,255,0.4)] focus:outline-none"
+              />
+            </div>
+
+            <!-- Button -->
             <button
               type="button"
-              class="shrink-0 rounded-md bg-[#312e81] px-4 py-2 font-medium leading-6 text-white text-[14px]"
-              data-name="button"
-              data-node-id="I16:1015;6:268"
+              class="-translate-y-1/2 relative top-1/2 flex h-14 items-center gap-2 rounded-full bg-[var(--acidgreen,#47f906)] px-10 text-[14px] font-bold uppercase tracking-[0.7px] text-black"
+              data-name="Button"
+              data-node-id="21:984"
             >
-              Find Games
+              <span>Search</span>
+              <span class="relative h-[15px] w-[15px]" aria-hidden="true">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/21869dd2-3bfb-4d72-9a87-e1fbeef64d86"
+                  alt=""
+                  class="absolute inset-0 h-full w-full max-w-none object-contain"
+                />
+              </span>
             </button>
           </div>
         </div>
