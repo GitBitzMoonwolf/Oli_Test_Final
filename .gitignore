@@ -1,0 +1,8 @@
+# Node / tooling (in case you add tools later)
+node_modules
+dist
+.cache
+
+# macOS
+.DS_Store
+

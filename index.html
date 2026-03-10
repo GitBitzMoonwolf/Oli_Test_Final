@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Tailwind Project</title>
+    <!-- Tailwind CSS via CDN for a simple starter setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+        <div class="flex items-center gap-2">
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500 text-sm font-semibold text-slate-950">
+            TW
+          </div>
+          <span class="text-sm font-medium text-slate-200">
+            My Tailwind Starter
+          </span>
+        </div>
+        <nav class="text-xs font-medium text-slate-400">
+          <span>Starter template</span>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10 md:flex-row md:items-center">
+      <!-- Text content -->
+      <section class="md:w-1/2 space-y-4">
+        <p class="text-xs uppercase tracking-[0.2em] text-sky-400">
+          Hello world
+        </p>
+        <h1 class="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl">
+          A simple starter project with Tailwind CSS.
+        </h1>
+        <p class="text-sm leading-relaxed text-slate-300">
+          This project is a clean, minimal starting point for experimenting with
+          Tailwind CSS and learning how to track your changes with Git and GitHub.
+          Over time you can grow this into a full project while keeping the
+          structure easy to understand.
+        </p>
+        <div class="mt-4 flex gap-3">
+          <span class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-700/80">
+            Built with Tailwind CSS
+          </span>
+          <span class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-700/80">
+            Ready for Git & GitHub
+          </span>
+        </div>
+      </section>
+
+      <!-- Image -->
+      <section class="md:w-1/2">
+        <div class="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80"
+            alt="Abstract photo of a person working at a computer"
+            class="h-64 w-full object-cover md:h-80"
+          />
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent px-4 pb-4 pt-10">
+            <p class="text-xs font-medium text-slate-200">
+              “Every big project starts with a small, clear first step.”
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-900/80">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 text-xs text-slate-500">
+        <span>Tailwind starter template</span>
+        <span>Edit this text to describe your own project.</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
