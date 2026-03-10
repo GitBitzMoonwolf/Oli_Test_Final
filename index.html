@@ -3,73 +3,237 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starter Tailwind Project</title>
-    <!-- Tailwind CSS via CDN for a simple starter setup -->
+    <title>Oli Experiments</title>
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="min-h-screen bg-pink-500 text-slate-100">
-    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur">
-      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-        <div class="flex items-center gap-2">
-          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500 text-sm font-semibold text-slate-950">
-            TW
+  <body
+    class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-pink-400/40 selection:text-slate-950"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_#f97316_0,_transparent_55%),radial-gradient(circle_at_bottom,_#6366f1_0,_transparent_55%)] opacity-60"
+    ></div>
+
+    <header class="border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+      <div
+        class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 text-xs font-semibold text-slate-950 shadow-[0_0_0_1px_rgba(15,23,42,0.7)] shadow-pink-500/30"
+          >
+            Oli
           </div>
-          <span class="text-sm font-medium text-slate-200">
-            My Tailwind Starter
-          </span>
+          <div class="flex flex-col">
+            <span class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
+              Experiments
+            </span>
+            <span class="text-sm font-medium text-slate-100">
+              Playful UI studies
+            </span>
+          </div>
         </div>
-        <nav class="text-xs font-medium text-slate-400">
-          <span>Starter template</span>
+        <nav class="hidden items-center gap-6 text-xs font-medium text-slate-400 sm:flex">
+          <button
+            class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[0.7rem] uppercase tracking-[0.2em] text-slate-200 shadow-sm shadow-slate-900/50"
+          >
+            Prototype
+          </button>
         </nav>
       </div>
     </header>
 
-    <main class="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10 md:flex-row md:items-center">
-      <!-- Text content -->
-      <section class="md:w-1/2 space-y-4">
-        <p class="text-xs uppercase tracking-[0.2em] text-sky-400">
-          Hello world
-        </p>
-        <h1 class="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl">
-          A simple starter project with Tailwind CSS.
-        </h1>
-        <p class="text-sm leading-relaxed text-slate-300">
-          This project is a clean, minimal starting point for experimenting with
-          Tailwind CSS and learning how to track your changes with Git and GitHub.
-          Over time you can grow this into a full project while keeping the
-          structure easy to understand.
-        </p>
-        <div class="mt-4 flex gap-3">
-          <span class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-700/80">
-            Built with Tailwind CSS
+    <main
+      class="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-10 sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:py-16"
+    >
+      <!-- Left column -->
+      <section class="space-y-6 lg:w-1/2">
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+          <span class="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-slate-300">
+            Live prototype · Oli_Experiments
           </span>
-          <span class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-700/80">
-            Ready for Git & GitHub
+        </div>
+
+        <div class="space-y-3">
+          <h1
+            class="text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl"
+          >
+            Tiny playful experiments for
+            <span class="bg-gradient-to-r from-orange-400 via-pink-400 to-violet-400 bg-clip-text text-transparent">
+              interfaces that feel alive.
+            </span>
+          </h1>
+          <p class="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            A sandbox of micro‑interactions, soft glass surfaces, and color‑soaked layouts.
+            Built to explore how far we can push simple HTML and Tailwind while keeping things
+            light, fast, and expressive.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button
+            class="inline-flex items-center gap-2 rounded-full bg-slate-50 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-950 shadow-lg shadow-pink-500/30 transition hover:-translate-y-0.5 hover:bg-white"
+          >
+            View interactions
+            <span
+              class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-900/5 text-[0.7rem]"
+            >
+              ↗
+            </span>
+          </button>
+          <button
+            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium text-slate-100 shadow-sm shadow-slate-900/60 hover:bg-white/10"
+          >
+            See color system
+          </button>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-2 text-[0.7rem] font-medium text-slate-300">
+          <span
+            class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-orange-400"></span>
+            Motion‑forward layouts
+          </span>
+          <span
+            class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-pink-400"></span>
+            Figma‑to‑code fidelity
+          </span>
+          <span
+            class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span>
+            Tailwind only
           </span>
         </div>
       </section>
 
-      <!-- Image -->
-      <section class="md:w-1/2">
-        <div class="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80"
-            alt="Abstract photo of a person working at a computer"
-            class="h-64 w-full object-cover md:h-80"
-          />
-          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent px-4 pb-4 pt-10">
-            <p class="text-xs font-medium text-slate-200">
-              “Every big project starts with a small, clear first step.”
-            </p>
+      <!-- Right column / experiment stack -->
+      <section class="relative mt-4 h-[320px] w-full lg:mt-0 lg:h-[360px] lg:w-1/2">
+        <div
+          class="pointer-events-none absolute -inset-10 -z-10 bg-[radial-gradient(circle_at_top,_rgba(248,113,113,0.35),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(129,140,248,0.4),_transparent_55%)] opacity-70"
+        ></div>
+
+        <div
+          class="absolute inset-x-4 top-4 mx-auto h-64 max-w-sm -rotate-3 rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-2xl shadow-slate-950/80 backdrop-blur-xl sm:h-72"
+        >
+          <div class="flex items-center justify-between gap-3 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-pink-500 text-[0.6rem] font-semibold text-slate-950">
+                OE
+              </div>
+              <div class="flex flex-col">
+                <span class="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  Frame · 16–1019
+                </span>
+                <span class="text-xs font-medium text-slate-100">
+                  Gradient cards
+                </span>
+              </div>
+            </div>
+            <span class="rounded-full bg-white/5 px-2 py-1 text-[0.6rem] font-medium text-slate-200">
+              60 FPS
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div
+              class="flex flex-col justify-between rounded-2xl bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 p-3 text-slate-950 shadow-lg shadow-pink-500/40"
+            >
+              <div class="space-y-1">
+                <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em]">
+                  Touch card
+                </p>
+                <p class="text-xs font-medium">
+                  Springy tap feedback and soft edges for playful controls.
+                </p>
+              </div>
+              <div class="mt-3 flex items-center justify-between text-[0.65rem] font-medium">
+                <span class="inline-flex items-center gap-1">
+                  <span class="h-1.5 w-1.5 rounded-full bg-slate-950/70"></span>
+                  Active
+                </span>
+                <span>0.18s ease-out</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <div
+                class="flex-1 rounded-2xl border border-white/10 bg-slate-900/80 p-3 text-[0.7rem] text-slate-200"
+              >
+                <p class="font-semibold">Layer blur</p>
+                <p class="mt-1 text-[0.65rem] text-slate-400">
+                  Glass panels stack with subtle depth and colored glows.
+                </p>
+              </div>
+              <div
+                class="flex flex-1 items-center justify-between rounded-2xl border border-white/10 bg-gradient-to-r from-slate-900/90 to-slate-900/60 px-3 py-2 text-[0.65rem] text-slate-200"
+              >
+                <span class="flex items-center gap-1">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Ready for handoff
+                </span>
+                <span class="text-[0.6rem] text-slate-400">Matches Figma 1:1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex items-center justify-between text-[0.65rem] text-slate-400">
+            <span>Auto layout · 24 px padding · 12 px gap</span>
+            <span>Tailwind · HTML only</span>
+          </div>
+        </div>
+
+        <div
+          class="absolute inset-x-10 top-24 mx-auto h-56 max-w-sm rotate-3 rounded-3xl border border-white/10 bg-slate-900/80 p-4 shadow-2xl shadow-slate-950/80 backdrop-blur-xl sm:h-60"
+        >
+          <div class="flex items-center justify-between text-[0.65rem] text-slate-300">
+            <span class="font-semibold uppercase tracking-[0.18em]">
+              Experiment timeline
+            </span>
+            <span class="rounded-full bg-white/5 px-2 py-0.5 text-[0.6rem]">
+              v0.3
+            </span>
+          </div>
+          <div class="mt-3 space-y-2.5 text-[0.7rem] text-slate-200">
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-orange-400"></span>
+                Motion presets
+              </span>
+              <span class="text-slate-400">Complete</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-pink-400"></span>
+                Color tokens
+              </span>
+              <span class="text-slate-400">In progress</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span>
+                Sound cues
+              </span>
+              <span class="text-slate-400">Planned</span>
+            </div>
+          </div>
+          <div class="mt-4 h-1 rounded-full bg-slate-800">
+            <div class="h-1 w-2/3 rounded-full bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500"></div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-slate-800 bg-slate-900/80">
-      <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 text-xs text-slate-500">
-        <span>Tailwind starter template</span>
-        <span>Edit this text to describe your own project.</span>
+    <footer class="border-t border-white/10 bg-slate-950/80">
+      <div
+        class="mx-auto flex max-w-5xl flex-col items-start justify-between gap-3 px-4 py-4 text-[0.7rem] text-slate-400 sm:flex-row sm:px-6 lg:px-8"
+      >
+        <span>Made with Tailwind · Oli_Experiments</span>
+        <span>Adjust copy and tokens here as the Figma file evolves.</span>
       </div>
     </footer>
   </body>
