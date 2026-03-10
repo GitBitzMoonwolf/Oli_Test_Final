@@ -3,239 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oli Experiments</title>
-    <!-- Tailwind CSS via CDN -->
+    <title>alternativefootball.net – Non league finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
   </head>
-  <body
-    class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-pink-400/40 selection:text-slate-950"
-  >
+  <body class="min-h-screen font-sans antialiased">
+    <!-- Homepage (node 16:1019) -->
     <div
-      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_#f97316_0,_transparent_55%),radial-gradient(circle_at_bottom,_#6366f1_0,_transparent_55%)] opacity-60"
-    ></div>
-
-    <header class="border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
-      <div
-        class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
-      >
-        <div class="flex items-center gap-3">
-          <div
-            class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 text-xs font-semibold text-slate-950 shadow-[0_0_0_1px_rgba(15,23,42,0.7)] shadow-pink-500/30"
-          >
-            Oli
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
-              Experiments
-            </span>
-            <span class="text-sm font-medium text-slate-100">
-              Playful UI studies
-            </span>
-          </div>
-        </div>
-        <nav class="hidden items-center gap-6 text-xs font-medium text-slate-400 sm:flex">
-          <button
-            class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[0.7rem] uppercase tracking-[0.2em] text-slate-200 shadow-sm shadow-slate-900/50"
-          >
-            Prototype
-          </button>
-        </nav>
-      </div>
-    </header>
-
-    <main
-      class="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-10 sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:py-16"
+      class="flex min-h-screen w-full flex-col items-center"
+      data-name="Homepage"
+      data-node-id="16:1019"
     >
-      <!-- Left column -->
-      <section class="space-y-6 lg:w-1/2">
-        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
-          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-          <span class="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-slate-300">
-            Live prototype · Oli_Experiments
-          </span>
-        </div>
-
-        <div class="space-y-3">
-          <h1
-            class="text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl"
-          >
-            Tiny playful experiments for
-            <span class="bg-gradient-to-r from-orange-400 via-pink-400 to-violet-400 bg-clip-text text-transparent">
-              interfaces that feel alive.
-            </span>
-          </h1>
-          <p class="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            A sandbox of micro‑interactions, soft glass surfaces, and color‑soaked layouts.
-            Built to explore how far we can push simple HTML and Tailwind while keeping things
-            light, fast, and expressive.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-3">
-          <button
-            class="inline-flex items-center gap-2 rounded-full bg-slate-50 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-950 shadow-lg shadow-pink-500/30 transition hover:-translate-y-0.5 hover:bg-white"
-          >
-            View interactions
-            <span
-              class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-900/5 text-[0.7rem]"
-            >
-              ↗
-            </span>
-          </button>
-          <button
-            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium text-slate-100 shadow-sm shadow-slate-900/60 hover:bg-white/10"
-          >
-            See color system
-          </button>
-        </div>
-
-        <div class="flex flex-wrap gap-3 pt-2 text-[0.7rem] font-medium text-slate-300">
-          <span
-            class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-orange-400"></span>
-            Motion‑forward layouts
-          </span>
-          <span
-            class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-pink-400"></span>
-            Figma‑to‑code fidelity
-          </span>
-          <span
-            class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span>
-            Tailwind only
-          </span>
-        </div>
-      </section>
-
-      <!-- Right column / experiment stack -->
-      <section class="relative mt-4 h-[320px] w-full lg:mt-0 lg:h-[360px] lg:w-1/2">
-        <div
-          class="pointer-events-none absolute -inset-10 -z-10 bg-[radial-gradient(circle_at_top,_rgba(248,113,113,0.35),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(129,140,248,0.4),_transparent_55%)] opacity-70"
-        ></div>
-
-        <div
-          class="absolute inset-x-4 top-4 mx-auto h-64 max-w-sm -rotate-3 rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-2xl shadow-slate-950/80 backdrop-blur-xl sm:h-72"
-        >
-          <div class="flex items-center justify-between gap-3 pb-3">
-            <div class="flex items-center gap-2">
-              <div class="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-pink-500 text-[0.6rem] font-semibold text-slate-950">
-                OE
-              </div>
-              <div class="flex flex-col">
-                <span class="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  Frame · 16–1019
-                </span>
-                <span class="text-xs font-medium text-slate-100">
-                  Gradient cards
-                </span>
-              </div>
-            </div>
-            <span class="rounded-full bg-white/5 px-2 py-1 text-[0.6rem] font-medium text-slate-200">
-              60 FPS
-            </span>
-          </div>
-
-          <div class="grid grid-cols-2 gap-3">
-            <div
-              class="flex flex-col justify-between rounded-2xl bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 p-3 text-slate-950 shadow-lg shadow-pink-500/40"
-            >
-              <div class="space-y-1">
-                <p class="text-[0.65rem] font-semibold uppercase tracking-[0.2em]">
-                  Touch card
-                </p>
-                <p class="text-xs font-medium">
-                  Springy tap feedback and soft edges for playful controls.
-                </p>
-              </div>
-              <div class="mt-3 flex items-center justify-between text-[0.65rem] font-medium">
-                <span class="inline-flex items-center gap-1">
-                  <span class="h-1.5 w-1.5 rounded-full bg-slate-950/70"></span>
-                  Active
-                </span>
-                <span>0.18s ease-out</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-3">
-              <div
-                class="flex-1 rounded-2xl border border-white/10 bg-slate-900/80 p-3 text-[0.7rem] text-slate-200"
-              >
-                <p class="font-semibold">Layer blur</p>
-                <p class="mt-1 text-[0.65rem] text-slate-400">
-                  Glass panels stack with subtle depth and colored glows.
-                </p>
-              </div>
-              <div
-                class="flex flex-1 items-center justify-between rounded-2xl border border-white/10 bg-gradient-to-r from-slate-900/90 to-slate-900/60 px-3 py-2 text-[0.65rem] text-slate-200"
-              >
-                <span class="flex items-center gap-1">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                  Ready for handoff
-                </span>
-                <span class="text-[0.6rem] text-slate-400">Matches Figma 1:1</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 flex items-center justify-between text-[0.65rem] text-slate-400">
-            <span>Auto layout · 24 px padding · 12 px gap</span>
-            <span>Tailwind · HTML only</span>
-          </div>
-        </div>
-
-        <div
-          class="absolute inset-x-10 top-24 mx-auto h-56 max-w-sm rotate-3 rounded-3xl border border-white/10 bg-slate-900/80 p-4 shadow-2xl shadow-slate-950/80 backdrop-blur-xl sm:h-60"
-        >
-          <div class="flex items-center justify-between text-[0.65rem] text-slate-300">
-            <span class="font-semibold uppercase tracking-[0.18em]">
-              Experiment timeline
-            </span>
-            <span class="rounded-full bg-white/5 px-2 py-0.5 text-[0.6rem]">
-              v0.3
-            </span>
-          </div>
-          <div class="mt-3 space-y-2.5 text-[0.7rem] text-slate-200">
-            <div class="flex items-center justify-between">
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-orange-400"></span>
-                Motion presets
-              </span>
-              <span class="text-slate-400">Complete</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-pink-400"></span>
-                Color tokens
-              </span>
-              <span class="text-slate-400">In progress</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="flex items-center gap-2">
-                <span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span>
-                Sound cues
-              </span>
-              <span class="text-slate-400">Planned</span>
-            </div>
-          </div>
-          <div class="mt-4 h-1 rounded-full bg-slate-800">
-            <div class="h-1 w-2/3 rounded-full bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500"></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="border-t border-white/10 bg-slate-950/80">
-      <div
-        class="mx-auto flex max-w-5xl flex-col items-start justify-between gap-3 px-4 py-4 text-[0.7rem] text-slate-400 sm:flex-row sm:px-6 lg:px-8"
+      <!-- Header (node 16:1020) -->
+      <header
+        class="flex w-full shrink-0 items-center gap-2 bg-[#312e81] px-8 py-6 md:gap-2 md:px-8 md:py-6"
+        data-name="Header"
+        data-node-id="16:1020"
       >
-        <span>Made with Tailwind · Oli_Experiments</span>
-        <span>Adjust copy and tokens here as the Figma file evolves.</span>
-      </div>
-    </footer>
+        <div
+          class="h-6 w-6 shrink-0 overflow-hidden"
+          data-name="sports_soccer_24dp"
+          aria-hidden="true"
+        >
+          <img
+            src="https://www.figma.com/api/mcp/asset/cd85d46b-6eab-4c6b-8075-1e112edceb4e"
+            alt=""
+            class="block h-full w-full object-contain"
+          />
+        </div>
+        <p
+          class="shrink-0 font-medium leading-6 text-[#eef2ff] text-[14px]"
+          data-node-id="I16:1020;16:1018"
+        >
+          alternativefootball.net
+        </p>
+      </header>
+
+      <!-- Hero (node 16:1013) -->
+      <section
+        class="flex w-full shrink-0 flex-col items-start gap-8 bg-[#e0e7ff] px-6 py-14 md:px-[104px] md:py-14"
+        data-name="Hero"
+        data-node-id="16:1013"
+      >
+        <h1
+          class="whitespace-pre-wrap font-extrabold leading-[48px] tracking-[-0.576px] text-[#312e81] text-[32px] md:text-[48px]"
+          data-node-id="16:1014"
+        >
+          Non league finder,
+          real football real fans
+        </h1>
+
+        <div
+          class="flex flex-col items-start gap-1.5"
+          data-name="input"
+          data-node-id="16:1015"
+        >
+          <p
+            class="shrink-0 font-medium leading-5 text-[#0f172a] text-[14px]"
+            data-node-id="I16:1015;2:270"
+          >
+            Find a game near your postcode
+          </p>
+          <div
+            class="flex w-full max-w-[384px] items-start gap-2"
+            data-name="input/with button"
+            data-node-id="I16:1015;6:262"
+          >
+            <div
+              class="min-h-0 min-w-0 flex-1"
+              data-name="default"
+              data-node-id="I16:1015;6:263"
+            >
+              <div
+                class="flex w-full items-center rounded-md border border-[#cbd5e1] border-solid bg-white px-3 py-2 pr-14"
+                data-name="field"
+                data-node-id="I16:1015;6:264"
+              >
+                <input
+                  type="text"
+                  placeholder="Postcode"
+                  class="w-full font-normal leading-6 text-[#0f172a] placeholder:text-[#94a3b8] text-[16px] outline-none"
+                  aria-label="Postcode"
+                  data-node-id="I16:1015;6:265"
+                />
+              </div>
+            </div>
+            <button
+              type="button"
+              class="shrink-0 rounded-md bg-[#312e81] px-4 py-2 font-medium leading-6 text-white text-[14px]"
+              data-name="button"
+              data-node-id="I16:1015;6:268"
+            >
+              Find Games
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
-
